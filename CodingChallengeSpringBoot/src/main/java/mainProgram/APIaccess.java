@@ -75,12 +75,12 @@ public class APIaccess {
 		try {
 			//The string content is converted to a JSONObject
 			data = new JSONObject(fbiContent.toString());
-			// Das JSONObject gibt ein JSONArray zurueck
+			//The JSONObject returns a JSONArray
 			arrayItem = data.getJSONArray("items");
 
 			//random selection of a criminal
 			Random randomGetCr = new Random();
-			int randomCriminal = randomGetCr.nextInt(arrayItem.length());
+			int randomCriminal = randomGetCr.nextInt(1,arrayItem.length());
 
 			item = arrayItem.getJSONObject(randomCriminal);
 			//The JSONArray for the Musghot
@@ -95,7 +95,7 @@ public class APIaccess {
 	private String getRandomPage() {
 		//random Selection of the page
 		Random random = new Random();
-		int randomValue = random.nextInt(46);
+		int randomValue = random.nextInt(1,49);
 		page = "?page=" + randomValue;
 		
 	return page;
