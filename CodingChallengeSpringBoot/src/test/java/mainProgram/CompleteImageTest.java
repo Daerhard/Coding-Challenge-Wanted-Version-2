@@ -18,9 +18,9 @@ class CompleteImageTest {
 		//comparison variable for the test
 		Boolean imagesIdentical = null;
 		
-		URL testUrlBackgroundImage  = ClassLoader.getSystemResource("static/Images/JUnitTestImage.jpg");
+		URL testUrlImage  = ClassLoader.getSystemResource("static/ImagesTest/JUnitTestImage.jpg");
 		//Create Instance for the test
-		CompleteImage completeImage = new CompleteImage(233, 400, BufferedImage.TYPE_INT_RGB, testUrlBackgroundImage.toString().replace(".jpg", ""));
+		CompleteImage completeImage = new CompleteImage(233, 400, BufferedImage.TYPE_INT_RGB, testUrlImage.toString().replace(".jpg", ""));
 		//Create image for the comparison
 		BufferedImage testBackgroundImage = completeImage.getBackgroundImage();
 		
